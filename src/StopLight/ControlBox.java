@@ -6,6 +6,7 @@ public class ControlBox {
 
 	public ControlBox(Intersection intersection){
 		this.intersection = intersection;
+		this.digitalModel = new DigitalModel();
 	}
 
 	public DigitalModel getDigitalModel(){
@@ -15,6 +16,4 @@ public class ControlBox {
 	public Intersection getIntersection(){
 		return this.intersection;
 	}
-
-
 }

@@ -1,11 +1,25 @@
 package StopLight;
-import java.util.*;
+import java.util.List;
+import java.util.Queue;
+import MicroController.MicroController;
 
 public class DigitalModel {
-    private Queue<MicroController> intersectionQueue;
+    private List<MicroController> intersectionQueue;
 
-    public DigitalModel(MicroController microController){
-        intersectionQueue.add(mircroController);
+    public DigitalModel(){
+    }
+
+    public void addMicroController(MicroController microController){
+        intersectionQueue.add(microController);
+    }
+
+    public void removeMicroController(MicroController microController){
+        intersectionQueue.remove(microController);
+    }
+
+    public void sortQueue(){
+        intersectionQueue.sort(null);
+        System.out.println("Digital Model has been sorted...");
     }
 
     /*
