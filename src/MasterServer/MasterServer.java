@@ -5,7 +5,6 @@ import StopLight.ControlBox;
 public class MasterServer {
 
 	private static MasterServer masterServer = new MasterServer();
-
 	/*
 	There can only be 1 Master Server
 	 */
