@@ -1,8 +1,10 @@
 package StopLight;
 
+import java.util.ArrayList;
+
 public class IrSensor {
 	private Pedestrian pedestrian;
-	private boolean[] pedestrianArray;
+	private ArrayList<Boolean> pedestrianArray;
 	final private static int PRIORITY = 5;
 
 	public static int getPriority() {
