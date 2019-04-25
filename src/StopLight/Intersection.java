@@ -1,6 +1,7 @@
 package StopLight;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Intersection {
 	private List<Road> roads;
@@ -10,8 +11,8 @@ public class Intersection {
 	private Intersection(){}
 
 	public static class Builder{
-		private ArrayList<Road> roads = new ArrayList<Road>();
-		private List<IrSensor> irSensors;
+		private List<Road> roads = new ArrayList<Road>();
+		private List<IrSensor> irSensors = new ArrayList<IrSensor>();
 		private TrafficLights trafficLights;
 
 		//
@@ -44,5 +45,23 @@ public class Intersection {
 
 			return intersection;
 		}
+	}
+	
+	public void setTrafficLights(String timings) {
+		System.out.println("Traffic light settings sent to traffic light");
+		char even = 'R';
+		char odd = 'G';
+		if (trafficLights.getLightStatus(0) == 'R') {
+			even = 'G';
+			odd = 'R';
+		}
+		for (int i = 0; i < 4; i++) {
+			if (i % 2 == 0) {
+				trafficLights.setLightStatus(i, even);
+			} else {
+				trafficLights.setLightStatus(i, odd);
+			}
+		}
+		System.out.println("Current traffic light settings are " + trafficLights);
 	}
 }

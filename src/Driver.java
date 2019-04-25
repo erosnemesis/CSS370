@@ -1,6 +1,9 @@
 import StopLight.ControlBox;
 import StopLight.Intersection;
 
+import StopLight.*;
+import MicroController.*;
+
 public class Driver {
 	public static void main(String args[]){
 		// implement driver
@@ -24,6 +27,42 @@ public class Driver {
 				.build();
 
 		ControlBox controlBox = new ControlBox(intersection);
+		
+		MicroController m1 = new MicroController("Car", "BMW", "X5");
+		MicroController m2 = new MicroController("Car", "Honda", "Civic");
+		MicroController m3 = new MicroController("Car", "Subaru", "Outback");
+		MicroController m4 = new MicroController("Bus", "TTC", "Orion VII");
+
+		
+		// vehicle enters the area of the intersection
+		controlBox.getDigitalModel().addMicroController(m1);
+		System.out.println();
+		controlBox.getDigitalModel().addMicroController(m2);
+		System.out.println();
+		
+		controlBox.pushLightColors();
+		System.out.println();
+		
+		// vehicle exits the intersection
+		controlBox.getDigitalModel().removeMicroController(m1);
+		System.out.println();
+		controlBox.getDigitalModel().addMicroController(m3);
+		System.out.println();
+		controlBox.getDigitalModel().addMicroController(m4);
+		System.out.println();
+		
+		controlBox.pushLightColors();
+		System.out.println();
+		
+		controlBox.getDigitalModel().removeMicroController(m2);
+		System.out.println();
+		controlBox.getDigitalModel().removeMicroController(m3);
+		System.out.println();
+		controlBox.getDigitalModel().removeMicroController(m4);
+		System.out.println();
+
+
+
 
 
 

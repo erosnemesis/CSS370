@@ -38,4 +38,12 @@ public class MicroController {
 	public Vehicle getVehicleData(){
 		return this.vehicle;
 	}
+	
+	@Override
+	public String toString() {
+		String microControllerString = "microcontroller with a speed of " + accel.getSpeed() 
+			+ ", GPS " + gps.getCoordinates() + ", gyro " + gyro + ", rf ID " + rf.getId();
+		microControllerString += "\nAssociated with a " + vehicle;
+		return microControllerString;
+	}
 }

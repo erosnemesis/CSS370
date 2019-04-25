@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class TrafficLights {
 	private ArrayList<Character> color = new ArrayList<>(3);
-	private HashMap<Integer, Character> lights;
+	private HashMap<Integer, Character> lights = new HashMap<Integer, Character>();
 
 	TrafficLights(int numLights){
 
@@ -29,5 +29,14 @@ public class TrafficLights {
 		}
 
 		lights.replace(lightId, color);
+	}
+	
+	@Override
+	public String toString() {
+		String lightString = "";
+		for (int i: lights.keySet()) {
+			lightString += "light " + i + " is " + lights.get(i) + " ";
+		}
+		return lightString;
 	}
 }

@@ -10,4 +10,8 @@ public class Bicycle extends VehicleImpl {
 	public int getPriority(){
 		return PRIORITY;
 	}
+	
+	public String toString() {
+		return super.toString() + ", type bicycle";
+	}
 }

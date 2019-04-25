@@ -23,4 +23,8 @@ public abstract class VehicleImpl implements Vehicle {
 	public String getModel(){
 		return this.model;
 	}
+	
+	public String toString() {
+		return "vehicle with make " + make + ", model " + model;
+	}
 }
