@@ -1,10 +1,9 @@
 package StopLight;
-import java.util.List;
-import java.util.Queue;
+import java.util.ArrayList;
 import MicroController.MicroController;
 
 public class DigitalModel {
-    private List<MicroController> intersectionQueue;
+    private ArrayList<MicroController> intersectionQueue;
 
     public DigitalModel(){
     }

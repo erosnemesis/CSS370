@@ -2,6 +2,10 @@ package Vehicle;
 
 public class Car extends VehicleImpl {
 
+	/*
+	add decorator pattern for emergency vehicles
+	 */
+
 	final private static int PRIORITY = 4; // weight for assigning light timings
 
 	private int year;

@@ -20,10 +20,12 @@ public class Driver {
 		Intersection intersection = new Intersection.Builder()
 				.addRoads(numRoads, numLanes, turnLane, width, cardinal, speedLimit)
 				.addIrSensors(numSensors)
-				.trafficLights(4)
+				.trafficLights(numLights)
 				.build();
 
 		ControlBox controlBox = new ControlBox(intersection);
+
+
 
 
 	}

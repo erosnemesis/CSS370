@@ -1,4 +1,5 @@
 package StopLight;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Intersection {
@@ -9,7 +10,7 @@ public class Intersection {
 	private Intersection(){}
 
 	public static class Builder{
-		private List<Road> roads;
+		private ArrayList<Road> roads = new ArrayList<Road>();
 		private List<IrSensor> irSensors;
 		private TrafficLights trafficLights;
 
