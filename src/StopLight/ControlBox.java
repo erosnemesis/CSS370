@@ -4,7 +4,7 @@ public class ControlBox {
 	private DigitalModel digitalModel;
 	private Intersection intersection;
 
-	ControlBox(Intersection intersection){
+	public ControlBox(Intersection intersection){
 		this.intersection = intersection;
 	}
 

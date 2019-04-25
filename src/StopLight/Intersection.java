@@ -6,12 +6,6 @@ public class Intersection {
 	private List<IrSensor> irSensors;
 	private TrafficLights trafficLights;
 
-	/*
-	This should be a builder class
-
-	Intersection.roads().irSensors().trafficLights.build();
-	 */
-
 	private Intersection(){}
 
 	public static class Builder{
@@ -36,9 +30,8 @@ public class Intersection {
 			return this;
 		}
 
-		public Builder trafficLights(){
-			TrafficLights t = new TrafficLights();
-			this.trafficLights = t;
+		public Builder trafficLights(int numLights){
+			this.trafficLights = new TrafficLights(numLights);
 			return this;
 		}
 
