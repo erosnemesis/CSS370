@@ -3,20 +3,20 @@ import MasterServer.ControlBoxEvent;
 
 public class ControlBoxModel {
 	// mimics a controlBox
-    private StopLight.DigitalModel digitalModel;
-    private ControlBoxEvent intersection;
+    private MasterServer.DigitalModel digitalModel;
+    private ControlBoxEvent boxEvent;
 
-    public ControlBoxModel(Intersection intersection){
-        this.intersection = intersection;
-        this.digitalModel = new DigitalModel();
+    public ControlBoxModel(ControlBoxEvent boxEvent){
+        this.boxEvent = boxEvent;
+        this.digitalModel = new MasterServer.DigitalModel();
     }
 
-    public DigitalModel getDigitalModel(){
+    public MasterServer.DigitalModel getDigitalModel(){
         return this.digitalModel;
     }
 
-    public Intersection getIntersection(){
-        return this.intersection;
+    public ControlBoxEvent getBoxEvent(){
+        return this.boxEvent;
     }
 
 }

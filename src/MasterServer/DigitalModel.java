@@ -4,21 +4,35 @@ import java.util.List;
 import MasterServer.ControlBoxEvent;
 
 public class DigitalModel {
-    // mimics a controlBox
-    private ControlBoxModel digitalModel;
-    private ControlBoxEvent intersection;
+    private ArrayList<ControlBoxEvent> controlBoxEvents;
 
-    public ControlBoxModel(Intersection intersection){
-        this.intersection = intersection;
-        this.digitalModel = new DigitalModel();
+    public DigitalModel(){
+        controlBoxEvents = new ArrayList<ControlBoxEvent>();
     }
 
-    public DigitalModel getDigitalModel(){
-        return this.digitalModel;
+    public void addEvent(ControlBoxEvent event){
+        System.out.println("Adding " + event);
+        controlBoxEvents.add(event);
     }
 
-    public Intersection getIntersection(){
-        return this.intersection;
+    public void removeEvent(ControlBoxEvent event){
+        System.out.println("Removing event from database: " + event);
+        controlBoxEvents.remove(event);
+    }
+
+    public void sortQueue(){
+        controlBoxEvents.sort(null);
+        System.out.println("Digital Model has been sorted...");
+    }
+
+    /*
+
+    All events stored on Master Sever organized by location, time, & date
+
+     */
+
+    public List<ControlBoxEvent> getControlBoxEvents() {
+        return controlBoxEvents;
     }
 
 }
