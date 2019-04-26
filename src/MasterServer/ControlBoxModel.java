@@ -1,8 +1,9 @@
 package MasterServer;
+import MasterServer.ControlBoxEvent;
 
 public class ControlBoxModel {
 	// mimics a controlBox
-    private ControlBoxModel digitalModel;
+    private StopLight.DigitalModel digitalModel;
     private ControlBoxEvent intersection;
 
     public ControlBoxModel(Intersection intersection){
@@ -17,4 +18,5 @@ public class ControlBoxModel {
     public Intersection getIntersection(){
         return this.intersection;
     }
+
 }

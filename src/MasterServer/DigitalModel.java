@@ -1,29 +1,26 @@
 package MasterServer;
+import java.util.ArrayList;
+import java.util.List;
+import MasterServer.ControlBoxEvent;
 
 public class DigitalModel {
-	// mimics the other DigitalModel
-    private ArrayList<ControlBoxEvent> controlBoxEventArrayList;
+    // mimics a controlBox
+    private ControlBoxModel digitalModel;
+    private ControlBoxEvent intersection;
 
-    public DigitalModel(){
+    public ControlBoxModel(Intersection intersection){
+        this.intersection = intersection;
+        this.digitalModel = new DigitalModel();
     }
 
-    public void addEvent(ControlBoxEvent controlBoxEvent){
-        controlBoxEventArrayList.add(controlBoxEvent);
+    public DigitalModel getDigitalModel(){
+        return this.digitalModel;
     }
 
-    public void removeEvent(ControlBoxEvent controlBoxEvent){controlBoxEventArrayList.remove(controlBoxEvent);
+    public Intersection getIntersection(){
+        return this.intersection;
     }
-
-    public void sortQueue(){
-        controlBoxEventArrayList.sort(null);
-        System.out.println("Digital Model has been sorted by time...");
-    }
-
-    /*
-
-    All events sent to MasterServer will be handled by the DigitalModel
-    Will contain list of Control Box Events
-
-     */
 
 }
+
+
