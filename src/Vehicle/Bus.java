@@ -30,4 +30,8 @@ public class Bus extends VehicleImpl {
 	public void setBusNumber(String busNumber){
 		this.busNumber = busNumber;
 	}
+	
+	public String toString() {
+		return super.toString() + ", type bus";
+	}
 }

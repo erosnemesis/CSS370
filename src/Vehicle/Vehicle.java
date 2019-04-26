@@ -6,4 +6,5 @@ public interface Vehicle {
 	String getModel();
 	String getMake();
 	int getPriority();
+	String toString();
 }

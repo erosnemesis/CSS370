@@ -25,5 +25,10 @@ public class Car extends VehicleImpl {
 	public void setYear(int year){
 		this.year = year;
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString() + ", type car"; 
+	}
 
 }

@@ -1,5 +1,7 @@
 package MicroController;
 
+import Helpers.RandomGenerator;
+
 public class GPS {
 
 	@Override
@@ -8,6 +10,23 @@ public class GPS {
 	}
 
 	public String getCoordinates(){
-		return "lon:xxx.xxx lat:xxx.xxx";
+		RandomGenerator rand = RandomGenerator.getInstance();
+		String coordinates = "";
+		for (int i = 0; i < 6; i++) {
+			if (i ==3) {
+				coordinates += ".";
+			}
+			coordinates += rand.getRandomInt() % 10;
+
+		}
+		coordinates += " lat:";
+		for (int i = 0; i < 6; i++) {
+			if (i ==3) {
+				coordinates += ".";
+			}
+			coordinates += rand.getRandomInt() % 10;
+
+		}
+		return coordinates;
 	}
 }

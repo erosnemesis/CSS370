@@ -16,4 +16,10 @@ public class ControlBox {
 	public Intersection getIntersection(){
 		return this.intersection;
 	}
+	
+	public void pushLightColors() {
+		digitalModel.getVehicleQueue();
+		System.out.println("Calculating optimal traffic light timings");
+		intersection.setTrafficLights("some timings");
+	}
 }
