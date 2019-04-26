@@ -1,13 +1,22 @@
 import StopLight.ControlBox;
 import StopLight.Intersection;
 
-import StopLight.*;
 import MicroController.*;
 
+/**
+ * Simulates the traffic light control system
+ * 
+ * @author Robert, Trent, Jeffrey, Megan
+ *
+ */
 public class Driver {
+	/**
+	 * Creates an intersection and a control box then simulates some vehicles
+	 * entering and leaving the intersection and corresponding light settings
+	 * 
+	 * @param args NONE
+	 */
 	public static void main(String args[]){
-		// implement driver
-		// Intersection builder...pass intersection to controlBox
 
 		//define a single intersection
 		short numRoads = 4;
@@ -28,6 +37,7 @@ public class Driver {
 
 		ControlBox controlBox = new ControlBox(intersection);
 		
+		// create some microcontrollers associated with various vehicles
 		MicroController m1 = new MicroController("Car", "BMW", "X5");
 		MicroController m2 = new MicroController("Car", "Honda", "Civic");
 		MicroController m3 = new MicroController("Car", "Subaru", "Outback");
@@ -40,20 +50,25 @@ public class Driver {
 		controlBox.getDigitalModel().addMicroController(m2);
 		System.out.println();
 		
+		// after a certain interval the control box calculates what the lights should be
 		controlBox.pushLightColors();
 		System.out.println();
 		
 		// vehicle exits the intersection
 		controlBox.getDigitalModel().removeMicroController(m1);
 		System.out.println();
+		
+		// some other vehicles enter the intersection
 		controlBox.getDigitalModel().addMicroController(m3);
 		System.out.println();
 		controlBox.getDigitalModel().addMicroController(m4);
 		System.out.println();
 		
+		// calculates light settings again
 		controlBox.pushLightColors();
 		System.out.println();
 		
+		// rest of the vehicles leave the intersection
 		controlBox.getDigitalModel().removeMicroController(m2);
 		System.out.println();
 		controlBox.getDigitalModel().removeMicroController(m3);
