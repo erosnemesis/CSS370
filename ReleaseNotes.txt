@@ -1,0 +1,47 @@
+Release Notes ----------- 4/25 ------------ Team C-- ---------------------------
+
+Implemented Very limited features
+-Generated Vehicles, GPS, TimeStamps
+-Integrated our UML Diagram into Java packages and files
+
+Following Design Patterns
+- Singleton: MasterServer
+- Factory: Vehicle Type
+- Decorator: Emergency Vehicle, Bus, etc. : In Progress
+
+How to run
+- In Terminal open our project up /TeamC--Workshop3 or whatever extentsion you have chosen
+- java Driver will produce
+--------------------- Output ----------------
+Adding microcontroller with a speed of 27.519008862623995, GPS 968.357 lat:124.117, gyro Gyroscope Data, rf ID 6959
+Associated with a vehicle with make BMW, model X5, type car
+
+Adding microcontroller with a speed of 118.23827254627261, GPS 278.577 lat:622.794, gyro Gyroscope Data, rf ID 6403
+Associated with a vehicle with make Honda, model Civic, type car
+
+Calculating optimal traffic light timings
+Traffic light settings sent to traffic light
+Current traffic light settings are light 0 is G light 1 is R light 2 is G light 3 is R 
+
+Removing microcontroller with id:6959
+
+Adding microcontroller with a speed of 66.81159686202582, GPS 145.230 lat:879.639, gyro Gyroscope Data, rf ID 6445
+Associated with a vehicle with make Subaru, model Outback, type car
+
+Adding microcontroller with a speed of 54.89510151698556, GPS 341.871 lat:212.110, gyro Gyroscope Data, rf ID 1979
+Associated with a vehicle with make TTC, model Orion VII, type bus
+
+Calculating optimal traffic light timings
+Traffic light settings sent to traffic light
+Current traffic light settings are light 0 is R light 1 is G light 2 is R light 3 is G 
+
+Removing microcontroller with id:6403
+
+Removing microcontroller with id:6445
+
+Removing microcontroller with id:1979
+
+Thank you for your support!
+-Team C--
+
+
