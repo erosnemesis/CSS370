@@ -42,6 +42,8 @@ public class Driver {
 		MicroController m2 = new MicroController("Car", "Honda", "Civic");
 		MicroController m3 = new MicroController("Car", "Subaru", "Outback");
 		MicroController m4 = new MicroController("Bus", "TTC", "Orion VII");
+		
+		MicroController m5  = new MicroController("EMERGENCY", "X", "Y");
 
 		
 		// vehicle enters the area of the intersection
@@ -75,8 +77,11 @@ public class Driver {
 		System.out.println();
 		controlBox.getDigitalModel().removeMicroController(m4);
 		System.out.println();
-
-
+		
+		// testing emergency vehicle decorator
+		controlBox.getDigitalModel().addMicroController(m5);
+		System.out.println();
+		controlBox.getDigitalModel().removeMicroController(m5);
 
 
 

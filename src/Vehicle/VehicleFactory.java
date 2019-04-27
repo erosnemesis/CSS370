@@ -29,6 +29,8 @@ public class VehicleFactory {
 				return new Bus(id, make, model);
 			case "Car":
 				return new Car(id, make, model);
+			case "EMERGENCY":
+				return new EmergencyDecorator(new Car(id, make, model));
 			default:
 				return null;
 		}

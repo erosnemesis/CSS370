@@ -51,14 +51,5 @@ public class ControlBoxEvent {
     public void removeEvent(MicroController controlBoxEvent) {
     	controlBoxEvents.remove(controlBoxEvent); 
     }
-
-
-    /*
-
-    All events sent to MasterServer will be handled by the ControlBoxEvent
-    Will contain list of data about the event
-
-     */
-
 }
 
